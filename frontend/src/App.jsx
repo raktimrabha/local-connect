@@ -34,7 +34,7 @@ function App() {
         <div className="card-body">
           {/* Using our custom class */}
           <h1 className="my-custom-heading mb-3">
-            Frontend (Bootstrap + Custom Sass)
+            Local Connect (Front + Backend Check via github)
           </h1>
           {/* Using our custom class */}
           <p className="custom-text">Message from Backend:</p>
