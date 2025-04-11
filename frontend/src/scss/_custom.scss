@@ -1,0 +1,30 @@
+// Example custom styles using Sass features
+
+// A custom class
+.my-custom-heading {
+    color: #dc3545; // Use Bootstrap's danger color variable, or a hex code
+    font-weight: bold;
+    border-bottom: 2px solid #ffc107; // Use Bootstrap's warning color variable
+    padding-bottom: 0.5rem; // Use standard CSS
+  
+    // Nesting example (Sass feature)
+    &:hover {
+      color: #0d6efd; // Bootstrap's primary color
+      cursor: pointer;
+    }
+  }
+  
+  // Overriding a Bootstrap component style (example)
+  // Make alert boxes have slightly more rounded corners
+  .alert {
+     border-radius: 0.5rem; // Default is 0.25rem
+  }
+  
+  // Using a Sass variable
+  $custom-text-color: #6c757d; // Bootstrap's secondary color
+  
+  .custom-text {
+    color: $custom-text-color;
+    font-style: italic;
+  }
+  

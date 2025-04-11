@@ -1,4 +1,18 @@
-// Import all of Bootstrap's Sass
-@import 'bootstrap/scss/bootstrap';
+// 1. (Optional) Import Bootstrap functions & variables using @use if you need to override them
+// @use "bootstrap/scss/functions" as bs-functions;
+// @use "bootstrap/scss/variables" as bs-variables with (
+//   $primary: #7952b3 // Example: Override primary color
+// );
 
-// You could add custom Sass overrides or rules below this line later
+// 2. Use the full Bootstrap bundle. This makes its CSS output available.
+// Variables/mixins would be available under the 'bootstrap' namespace if needed.
+@use "bootstrap/scss/bootstrap";
+
+// 3. Use your custom styles. Variables/mixins would be under the 'custom' namespace.
+@use "custom";
+
+// --- Example of using namespaced variables (if you had them) ---
+// .some-element {
+//   color: bs-variables.$success; // Accessing Bootstrap's success color variable
+//   background-color: custom.$my-custom-variable; // Accessing a variable from _custom.scss
+// }

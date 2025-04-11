@@ -2,11 +2,12 @@ const express = require('express');
 const cors = require('cors');
 
 const app = express();
-app.use(cors()); // Allow requests
+app.use(cors());
 
 app.get('/api/hello', (req, res) => {
   console.log("Backend: Received request for /api/hello");
-  res.json({ message: "Backend says Hello via Bootstrap! 🚀" }); // Updated message
+  // Changed message slightly to confirm update
+  res.json({ message: "Backend Powering Custom Sass! ⚡" });
 });
 
 const PORT = process.env.PORT || 3001;

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// No need to import App.css
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
@@ -25,18 +24,29 @@ function App() {
       });
   }, []);
 
-  // Using Bootstrap classes for layout and styling
+  // Using a mix of Bootstrap classes and our custom Sass classes
   return (
-    <div className="container d-flex align-items-center justify-content-center min-vh-100">
-      <div className="card text-center shadow p-4">
+    <div className="container mt-5"> {/* Bootstrap container with margin-top */}
+      <div className="card text-center shadow-sm"> {/* Bootstrap card */}
+        <div className="card-header">
+          Featured App
+        </div>
         <div className="card-body">
-          <h1 className="card-title text-primary mb-3">
-            Frontend (Bootstrap)
+          {/* Using our custom class */}
+          <h1 className="my-custom-heading mb-3">
+            Frontend (Bootstrap + Custom Sass)
           </h1>
-          <p className="card-text">Message from Backend:</p>
-          <p className="alert alert-success mt-3" role="alert">
+          {/* Using our custom class */}
+          <p className="custom-text">Message from Backend:</p>
+          {/* Bootstrap alert (should have slightly more rounded corners from our override) */}
+          <p className="alert alert-info mt-3" role="alert">
             {message}
           </p>
+          {/* Standard Bootstrap button */}
+          <button className="btn btn-primary">Bootstrap Button</button>
+        </div>
+        <div className="card-footer text-muted"> {/* Bootstrap card footer */}
+          Powered by Vite & React
         </div>
       </div>
     </div>
